@@ -1,53 +1,25 @@
-public class zad2 {
-    public static void main(String[] args) {
+import cw3klasy.*;
+
+public class zad2 
+{
+    public static void main (String [] argv)
+    {
         /* zad.2
-           a) napisać program podobny do programu z przykładu, który ma zliczyć iloś liter 'o', 'p', 'x', 'z', 'q' w wyrazie:
-            "ooooozjoonoxoooozoooooooooozoxooooopnpppoooiiooooomnzooooxoqoojoozoootyoooozoooxoooozooooxooooooojoooopxoooonnmooo"
-           b) oraz ma określić ile jest pozostałych liter, które nie należą do: 'o', 'p', 'x', 'z', 'q'
-         */
+            c) stworzyć objekty tych klas i wyświetlić przykładowe wyliczenia
+        */
 
-        String wyraz = "ooooozjoonoxoooozoooooooooozoxooooopnpppoooiiooooomnzooooxoqoojoozoootyoooozoooxoooozooooxooooooojoooopxoooonnmooo";
-        int 
-        o = 0, 
-        p = 0, 
-        x = 0, 
-        z = 0, 
-        q = 0, 
-        inne = 0;
+        Figury prostokat1 = new Prostokat("Prostokat 1 (2,4)", 2, 4);
+        Figury kwadrat1 = new Kwadrat("Kwadrat 1 (4)", 4);
+        Figury prostokat2 = new Prostokat("Prostokat 2 (5,3)", 5, 3);
+        Figury kwadrat2 = new Kwadrat("Kwadrat 2 (6)", 6);
 
-        for (int i = 0; i < wyraz.length(); i++) {
-            switch (wyraz.charAt(i)) {
-                case 'o':
-                    o++;
-                    break;
-
-                case 'p':
-                    p++;
-                    break;
-
-                case 'x':
-                    x++;
-                    break;
-
-                case 'z':
-                    z++;
-                    break;
-
-                case 'q':
-                    q++;
-                    break;
-
-                default:
-                    inne++;
-                    break;
-            }
-        }
-        System.out.println("Podany wyraz ma w sobie:");
-        System.out.printf("Liter 'o' = %d\n", o);
-        System.out.printf("Liter 'p' = %d\n", p);
-        System.out.printf("Liter 'x' = %d\n", x);
-        System.out.printf("Liter 'z' = %d\n", z);
-        System.out.printf("Liter 'q' = %d\n", q);
-        System.out.printf("Innych liter = %d", inne);
-    }
+        System.out.println ("Pole = " + prostokat1.pole());
+        System.out.println ("Obwód = " + prostokat1.obwod());
+        System.out.println ("Pole = " + kwadrat1.pole());
+        System.out.println ("Obwód = " + kwadrat1.obwod());
+        System.out.println ("Pole = " + prostokat2.pole());
+        System.out.println ("Obwód = " + prostokat2.obwod());
+        System.out.println ("Pole = " + kwadrat2.pole());
+        System.out.println ("Obwód = " + kwadrat2.obwod());
+    } 
 }
