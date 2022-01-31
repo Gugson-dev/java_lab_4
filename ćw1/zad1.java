@@ -1,37 +1,54 @@
-import java.util.Scanner;
+import cw1interfejsy.*;
+import cw1klasy.*;
+import cw1enumy.*;
 
-public class zad1 {
+public class zad1 
+{
+  public static void main(String[] args) 
+  {
+    /* zad.3
+      a) w klasie Main stworzyć 2 objekty typu Dom deklarując pierwszy objekt Typem Dom,
+      drugi objekt typem Budynek,
+      b) wykorzystać wszystkie metody do implementacji pól,
+      c) wyświetlić w konsoli metodę toString (na obu objektach) opisującą zachowanie klasy Dom,
+      d) sprawdzić czy idzie wywołać z obu instancji objektu (deklaracja z interfejsu i z klasy)
+      metodę której nie ma zadeklarowane w interfejsie Budynek, ale jest dopisana w klassie Dom,
+    */
 
-    public static void main(String[] args) {
-        /* zad 1 - Napisać za pomocą pętli do-while kod który będzie iterował od liczby 1000 w dół do 0.
-          Jeśli liczba będzie podzielna przez 2 ostatnie cyfry waszego indeksu (podać nr indesu z uczelni)
-          to dać komunikat "liczba XX podzielna przez YY" (XX-liczba podzielna YY-podzielnik)
-        */
+    //OBJEKTY
+    Dom dom = new Dom();
+    Budynek budynek = new Dom();
 
-        Scanner input = new Scanner(System.in);
+    // IMPLEMENTACJA W DOM
+    dom.setCena(3000);
+    dom.setKodPocztowy("80-463");
+    dom.setKolor(KolorEnum.BIALY);
+    dom.setMiejscowosc("Gdańsk");
+    dom.setNrDomu(13);
+    dom.setNrLokalu("19 F");
+    dom.setPowBudynku(35.5);
+    dom.setPowParkingu(0.0);
+    dom.setPowPodworka(0.0);
+    dom.setUlica("Startowa");
+    dom.setFundusz(150000);
+    dom.liczbaMieszkancow(4);
+    dom.liczbaOkien(8);
+    
+    // IMPLEMENTACJA W BUDYNEK
+    budynek.adresBudynku("Gdańsk", "Pilotów", 4, "20 G", "80-460");
+    budynek.powierzchnia(35.5, 0.0, 0.0);
+    budynek.liczbaOkien(8);
+    budynek.liczbaMieszkancow(4);
+    budynek.kolorDomu(KolorEnum.BIALY);
+    budynek.wyliczCene(35.5, 1250);
+    budynek.kupMieszkanie(150000, 3000);
 
-        System.out.print("Podaj swój numer indeksu: ");
-        int indeks = input.nextInt();
-        input.close();
+    // WYPISANIE OBU OBJEKTÓW POPRZEZ toString() I DODATKOWEJ METODY (AKURAT PASUJE)
+    System.out.println(dom.toString());
+    dom.dziala(); 
+    System.out.println(budynek.toString());
+    // budynek.dziala();  <-- nie działa :)
 
-        int x = 1000;
 
-        /* 
-
-        Co tu się dzieje? 
-        Przekształcam indeks na string, po czym ucinam ze stringa końcówkę (2 ostatnie liczby) i przekształcam je ponownie na int
-        
-        */
-
-        String ost_cyfry = Integer.toString(indeks);
-        int podzielnik = Integer.parseInt(ost_cyfry.substring(ost_cyfry.length() - 2));
-
-        do {
-          if (x % podzielnik == 0) {
-            System.out.printf("Liczba %d podzielna przez %d\n", x, podzielnik);
-          }
-
-          x--;
-        } while (x != 0);
-    }
+  }
 }
