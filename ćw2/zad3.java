@@ -2,9 +2,10 @@ import java.util.LinkedHashMap;
 
 import cw2klasy.*;
 
-public class zad3 {
-
-    public static void main(String[] args) {
+public class zad3 
+{
+    public static void main(String[] args) 
+    {
         /* zad.3
         a) stworzyć 2 objekty typu Student i uzupełnić wszystkie pola,
         b) stworzyć 2 objekty typu Pracownik i uzupełnić wszystkie pola,
@@ -69,6 +70,5 @@ public class zad3 {
         System.out.println(student2.toString() + "\n");
         System.out.println(pracownik1.toString() + "\n");
         System.out.println(pracownik2.toString());
-        
     }
 }
