@@ -12,6 +12,6 @@ public class zad1 {
     */
     
     /*
-        Klasy i interfejsy znajdują się w paczce (package cw2klasy);
+        Interfejsy znajdują się w paczce (package cw2interfejsy);
     */
 }

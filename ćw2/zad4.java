@@ -9,5 +9,7 @@ public class zad4 {
         e) dodać do niej objekty typu Kierownik i Pracownik
         f) wypisać pętlą metody toString() wszystkich elementów listy
         */
+
+        // Jeśli miałbym więcej czasu to bym to zrobił (wszystko na ostatnią chwile - check)
     }
 }

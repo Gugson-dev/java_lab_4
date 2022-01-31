@@ -10,7 +10,7 @@ public class zad2 {
         */
 
         /*
-            Zrobione jak widać w paczce    
+            Klasy znajdują się w paczce (package cw2klasy);
         */
     }
 }

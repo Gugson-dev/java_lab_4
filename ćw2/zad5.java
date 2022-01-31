@@ -7,5 +7,7 @@ public class zad5 {
         b) dokończyć implementację metod z interfejsów,
         c) stworzyć pola w metodzie main() i wywołać metody
         */
+
+        // Jeśli miałbym więcej czasu to bym to zrobił (wszystko na ostatnią chwile - check)
     }
 }
